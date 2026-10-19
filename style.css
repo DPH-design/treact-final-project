@@ -232,8 +232,8 @@ header {
 
 }
 
-.header__discription {
-    width: 40px;
+.header__description {
+    width: 40%;
 }
 
 header .row {
@@ -463,14 +463,14 @@ MOBILE RESPONSIVENESS ↓
         justify-content: flex-end;
     }
     .header__img {
-        max-width: 512;
+        max-width: 512px;
     }
     h1 {
         font-size: 36px;
         color: #1a202c;
         line-height: 1.25;
     }
-    .header__discription--para {
+    .header__description--para {
         font-size: 16px;
     }
     .header__customers {
@@ -482,6 +482,9 @@ MOBILE RESPONSIVENESS ↓
 
     .btn__menu {
         display: block;
+    }
+    .nav__links {
+        max-width: 1024px;
     }
     header .row {
         flex-direction: column;
@@ -502,7 +505,7 @@ MOBILE RESPONSIVENESS ↓
     .header__customers--title, .header__img--wrapper{
         margin-top: 48px;
     }
-    .header__description, .header__img--wraper {
+    .header__description, .header__img--wrapper {
         width: 100%;
         max-width: 512px;
         margin: 0 auto;
