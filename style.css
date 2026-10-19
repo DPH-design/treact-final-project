@@ -267,8 +267,12 @@ p {
 }
 
 .header__customers {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
     margin-top: 16px;
-    padding-right: 128px;
+    padding-right: 0;
     opacity: 0.5;
 }
 
@@ -473,9 +477,6 @@ MOBILE RESPONSIVENESS ↓
     .header__description--para {
         font-size: 16px;
     }
-    .header__customers {
-        padding-right: 64px;
-    }
 }
 
 @media (max-width: 1024px) {
@@ -484,7 +485,7 @@ MOBILE RESPONSIVENESS ↓
         display: block;
     }
     .nav__links {
-        max-width: 1024px;
+        display: none;
     }
     header .row {
         flex-direction: column;
@@ -500,7 +501,7 @@ MOBILE RESPONSIVENESS ↓
         margin: 20px 0;
     }
     .header__customers {
-        padding-right: 0px;
+        padding-right: 0;
     }
     .header__customers--title, .header__img--wrapper{
         margin-top: 48px;
