@@ -115,13 +115,13 @@ nav {
 
 .nav__link {
     margin: 0 24px;
-}
+    text-decoration: none;  
+  }
 
-a {
-    display: inline;
-    text-decoration: none;
-}
+.nav__link:hover {
+    text-decoration: underline;
 
+}
 
 .btn__menu {
     display: none;
@@ -172,6 +172,7 @@ button {
     margin: 8px 0;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
+    text-decoration: none;
 }
 
 .modal__link--primary {
