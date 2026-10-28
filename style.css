@@ -1771,6 +1771,9 @@ MOBILE RESPONSIVENESS ↓
     flex-direction: column;
     align-items: center;
 }
+.footer__social--link:first-child {
+    margin-left: 0px;
+}
 
 }
 
