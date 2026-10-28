@@ -120,6 +120,7 @@ nav {
 
 .nav__link:hover {
     text-decoration: underline;
+    text-underline-offset: 6px;
 
 }
 
@@ -1453,17 +1454,18 @@ footer {
     font-weight: 500;
     position: relative;
     cursor: pointer;
-    text-decoration: none;
+
 }
 
 .footer__column--link:hover {
     text-decoration: underline;
+    text-underline-offset: 6px;
 
 }
 
 
-.footer__colunm--link:hover {
-    text-decoration: underline;
+.footer__colunm--link:hover::after {
+   opacity: 1; 
 }
 
 
@@ -1471,12 +1473,17 @@ footer {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px;
+    bottom: -6px;
     height: 2px;
     width: 100%;
     background: #fff;
     transition: all 300ms ease;
     opacity: 0;
+}
+
+a {
+    display: inline;
+    text-decoration: none;
 }
 
 
@@ -1543,6 +1550,10 @@ img {
     width: 16px;
 }
 
+.footer__social--link:hover {
+    background-color: rgba(203, 213, 224);
+}
+
 
 
 
@@ -1592,8 +1603,11 @@ MOBILE RESPONSIVENESS ↓
     .testimonials__description {
         width: calc(100% - 40%);
     }
+    
 
     }
+
+
 
 @media (max-width: 1024px) {
 
@@ -1691,12 +1705,7 @@ MOBILE RESPONSIVENESS ↓
     .start__row {
         flex-direction: column;
     }
-
-    .start__title {
-        text-align: center;
-        width: 100px;
-        max-width: 512px;
-    }
+ 
     .start__buttons {
         width: auto;
         margin-top: 24px;
@@ -1705,8 +1714,15 @@ MOBILE RESPONSIVENESS ↓
         padding: 16px 32px;
     }
 
-
-
+    .start__title {
+        justify-content: center;
+        text-align: center;
+    }
+    .footer__columns {
+        /* justify-content: center;
+        align-items: center; */
+    
+    }
 
 
 }
@@ -1774,8 +1790,19 @@ MOBILE RESPONSIVENESS ↓
 .footer__social--link:first-child {
     margin-left: 0px;
 }
+.start__title{
+    justify-content: center;
+    text-align: center;
+}
+.footer__columns {
+    justify-content: center;
+    align-items: center;
+}
+
 
 }
+
+
 
 @media(max-width: 640px) {
     .container {
@@ -1799,6 +1826,8 @@ MOBILE RESPONSIVENESS ↓
 
     .start__title {
         font-size: 24px;
+        justify-content:center;
+        align-items: center;
     }
     .start__button {
         padding: 12px 24px;
@@ -1823,16 +1852,12 @@ MOBILE RESPONSIVENESS ↓
     }
     .footer__columns {
         justify-content: center;
-    }
+        align-items: center; 
+    
     .footer__copyright {
         font-size: 14px;
         text-align: center;
         line-height: 1.5;
     }
-    .footer__column {
-        width: auto;
-        padding: 0 16px;
-        text-align: center;
-        align-items: center;
-    }
+    
 }
