@@ -1852,12 +1852,20 @@ MOBILE RESPONSIVENESS ↓
     }
     .footer__columns {
         justify-content: center;
-        align-items: center; 
+        align-items: center;
+    }
+    .footer__column {
+        width: 50%;
+        padding: 0 16px;
+        align-items: center;
+        text-align: center;
+    } 
     
     .footer__copyright {
         font-size: 14px;
         text-align: center;
         line-height: 1.5;
     }
+
     
 }
