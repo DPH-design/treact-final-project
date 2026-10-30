@@ -41,6 +41,10 @@ main {
     margin-bottom: 96px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* 
 
@@ -271,7 +275,8 @@ p {
     height: auto;
     display: block;
     margin-top: 16px;
-    padding-right: 0;
+    margin-bottom: 36px;
+    padding-right: 128px;
     opacity: 0.5;
 }
 
@@ -302,6 +307,10 @@ p {
     align-items: center;
 }
 
+.header__email--input:hover {
+    border-color: rgba(160, 174, 192);
+}
+
 .header__email--input {
     width: 100%;
     border-radius: 500px;
@@ -330,6 +339,9 @@ p {
     font-size: 16px;
     transition: all 300ms ease;
 }
+.header__email--btn:hover {
+    background-color: rgba(60, 13, 153);
+}
 
 button {
     cursor: pointer;
@@ -351,6 +363,8 @@ FEATURES ↓
 .features {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 40px;
+
 }
 
 
@@ -362,6 +376,7 @@ FEATURES ↓
 
 section {
     padding: 0 32px;
+
 }
 
 .section__title {
@@ -378,7 +393,7 @@ section {
     max-width: 576px;
 }
 .feature {
-    width: calc(100% /3);
+    width: calc(100% / 3);
 }
 
 
@@ -391,6 +406,23 @@ section {
 .feature__text {
     margin-top: 8px;
     margin-left:16px;
+}
+
+.feature__img--wrapper {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 500px;
+}
+
+.feature__img {
+    width: 24px;
+    height: 24px;
+}
+
+
+img {
+    width: 100%;
 }
 
 
@@ -543,6 +575,9 @@ p {
 
 #quality .btn {
   margin-top: 32px;
+}
+.btn:hover {
+    background-color: rgba(80, 17, 204);
 }
 
 .btn {
@@ -1053,6 +1088,10 @@ p {
     letter-spacing: 0.05em;
     border: none;
 }
+.plan__button:hover {
+    transform: translate(1px, -1px);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+} 
 
 
 .plans__blob {
@@ -1340,12 +1379,21 @@ START / CALL TO ACTION ↓
     width: 50%;
 }
 
+.start__button:hover:nth-child(1) {
+    background-color: rgba(229, 62, 62);
+}
+
 .start__button:nth-child(1) {
     background: #f56565;
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     margin-right: 32px;
     transition: all 300ms ease;
+}
+
+.start__button:hover:nth-child(2) {
+    background-color: rgba(247, 250, 252);
+    color: rgba(100,21,255);
 }
 
 .start__button:nth-child(2) {
@@ -1647,9 +1695,6 @@ MOBILE RESPONSIVENESS ↓
     #features .section__title, #pricing .section__title {
         font-size: 48px;
     }
-    #features .section__title, #pricing .section__title {
-        text-align: center;
-    }
 
     .section__para {
         font-size: 16px;
@@ -1669,6 +1714,7 @@ MOBILE RESPONSIVENESS ↓
     
     .feature__row {
         padding: 32px 8px;
+        margin: 0 16px;
     }
     .feature__para {
         max-width: none;
@@ -1679,6 +1725,9 @@ MOBILE RESPONSIVENESS ↓
     .quality__disscription {
         margin-right: 0px;
         padding-right: 48px;
+    }
+    .value {
+        margin-top: 2.5rem;
     }
     .values__list {
         max-width: 20rem;
@@ -1717,12 +1766,14 @@ MOBILE RESPONSIVENESS ↓
     .start__title {
         justify-content: center;
         text-align: center;
+        width: 100%;
+        max-width: 512px;
     }
-    .footer__columns {
-        /* justify-content: center;
-        align-items: center; */
+    /* .footer__columns {
+      justify-content: center;
+        align-items: center; 
     
-    }
+    } */
 
 
 }
@@ -1736,6 +1787,10 @@ MOBILE RESPONSIVENESS ↓
 @media(max-width: 768px) {
     .features {
         justify-content: center;
+    }
+    .feature {
+        width: auto;
+        max-width: 384px;
     }
    
     #quality .row,
@@ -1751,10 +1806,17 @@ MOBILE RESPONSIVENESS ↓
     #pricing .row {
         margin-top: 40px;
     }
+    .value {
+        margin-right: 0px;
+        align-items: center;
+    }
 
     .values__list {
         margin-left: auto;
         margin-right: auto;
+    }
+    .value:nth-of-type(1) {
+        margin-right: 0px;
     }
 
     .step {
@@ -1765,6 +1827,9 @@ MOBILE RESPONSIVENESS ↓
     .step__description {
         margin-top: 12px;
         margin-left: 0;
+    }
+    .section__para {
+        font-size: 14px;
     }
 
     .quality__description, .quality__img--wrapper, .steps__description, .steps__img--wrapper, .values__description, .values__img, .testimonials__description, .testimonials__img {
@@ -1779,6 +1844,7 @@ MOBILE RESPONSIVENESS ↓
 }
 .footer__columns {
     justify-content: flex-start;
+    align-items: center;
 }
 .footer__copyright, .footer__socials {
     margin-top: 32px;
@@ -1794,9 +1860,9 @@ MOBILE RESPONSIVENESS ↓
     justify-content: center;
     text-align: center;
 }
-.footer__columns {
-    justify-content: center;
-    align-items: center;
+
+.footer__column {
+    width: calc(100% / 3);
 }
 
 
@@ -1808,15 +1874,49 @@ MOBILE RESPONSIVENESS ↓
     .container {
         padding: 80px 0;
     }
+    .header__email {
+        flex-direction: column;
+        height: auto;
+    }
+    .header__email--input {
+        position: static;
+        padding: 16px 0;
+        padding-left: 32px;
+        line-height: 1.5;
+    }
+    .header__email--btn {
+        width: 100%;
+        padding: 16px 0;
+        margin: 16px 0;
+        line-height: 1.5;
+    }
+    #features .section__title, #pricing .section__title {
+     font-size: 36px;
+    }
+
     .features {
         width: 100%;
         max-width: 580px;
         flex-direction: column;
         align-items: center;
-        }
+    }
      .feature {
         width: 100%;
         max-width: 384px;
+     }
+     .feature__row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+     }
+     .feature__text {
+        margin-left: 0;
+        margin-top: 16px;
+     }
+
+     .feature__para {
+        margin-top: 4px;
+        line-height: 2;
      }
       
     .nav__logo {
@@ -1828,6 +1928,9 @@ MOBILE RESPONSIVENESS ↓
         font-size: 24px;
         justify-content:center;
         align-items: center;
+    }
+    .section__title {
+        font-size: 30px;
     }
     .start__button {
         padding: 12px 24px;
@@ -1850,12 +1953,17 @@ MOBILE RESPONSIVENESS ↓
     .steps__list {
      margin-top: 48; 
     }
+    .testimonial__bottom {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4px;
+    }
     .footer__columns {
         justify-content: center;
         align-items: center;
     }
     .footer__column {
-        width: 50%;
+        width: auto;
         padding: 0 16px;
         align-items: center;
         text-align: center;
